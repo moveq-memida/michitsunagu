@@ -484,21 +484,21 @@ add_shortcode( 'my_shortcode', 'my_shortcode' );
 function theme_add_files() {
     global $post;
 
-    // CSS
-    wp_enqueue_style('c-reset', T_DIRE_URI.'/assets/css/reset.css', [], '1.0', 'all');
-    wp_enqueue_style('c-swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', [], '8.0', 'all');
+    // CSS — 元のheader.phpの読み込み順序を維持（カスケード順序が重要）
     wp_enqueue_style('c-slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css', [], '1.9.0', 'all');
     wp_enqueue_style('c-slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css', [], '1.9.0', 'all');
-    wp_enqueue_style('c-common', T_DIRE_URI.'/assets/css/common1.css', [], '20260108', 'all');
-    wp_enqueue_style('c-style', T_DIRE_URI.'/assets/css/style.css', [], '1.0', 'all');
-    wp_enqueue_style('c-animate', T_DIRE_URI.'/assets/css/animate.css', [], '1.0', 'all');
-    wp_enqueue_style('c-home', T_DIRE_URI.'/assets/css/home.css', [], '20250130', 'all');
-    wp_enqueue_style('c-custom', T_DIRE_URI.'/assets/css/custom.css', [], '1.0', 'all');
-    wp_enqueue_style('c-theme', T_DIRE_URI.'/style.css', [], '1.0', 'all');
     wp_enqueue_style('c-gazou-data', 'https://www.gazou-data.com/contents_share/css/contents.css', [], '1.0', 'all');
-    wp_enqueue_style('c-owl-carousel', T_DIRE_URI.'/assets/css/owl.carousel.min.css', [], '1.0', 'all');
+    wp_enqueue_style('c-style', T_DIRE_URI.'/assets/css/style.css', [], '1.0', 'all');
+    wp_enqueue_style('c-common', T_DIRE_URI.'/assets/css/common1.css', [], '20260108', 'all');
+    wp_enqueue_style('c-animate', T_DIRE_URI.'/assets/css/animate.css', [], '1.0', 'all');
+    wp_enqueue_style('c-reset', T_DIRE_URI.'/assets/css/reset.css', [], '1.0', 'all');
     wp_enqueue_style('c-slick-local', T_DIRE_URI.'/assets/css/slick.min.css', [], '1.0', 'all');
     wp_enqueue_style('c-slick-theme-local', T_DIRE_URI.'/assets/css/slick-theme.min.css', [], '1.0', 'all');
+    wp_enqueue_style('c-home', T_DIRE_URI.'/assets/css/home.css', [], '20250130', 'all');
+    wp_enqueue_style('c-custom', T_DIRE_URI.'/assets/css/custom.css', [], '1.0', 'all');
+    wp_enqueue_style('c-owl-carousel', T_DIRE_URI.'/assets/css/owl.carousel.min.css', [], '1.0', 'all');
+    wp_enqueue_style('c-swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', [], '8.0', 'all');
+    wp_enqueue_style('c-theme', T_DIRE_URI.'/style.css', [], '1.0', 'all');
 
     // header-b.php使用ページ（front-page, business, service, support, work）用CSS/JS
     if (is_front_page() || is_page(array('business', 'service', 'support', 'work'))) {
