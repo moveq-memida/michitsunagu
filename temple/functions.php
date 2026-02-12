@@ -495,6 +495,10 @@ function theme_add_files() {
     wp_enqueue_style('c-home', T_DIRE_URI.'/assets/css/home.css', [], '20250130', 'all');
     wp_enqueue_style('c-custom', T_DIRE_URI.'/assets/css/custom.css', [], '1.0', 'all');
     wp_enqueue_style('c-theme', T_DIRE_URI.'/style.css', [], '1.0', 'all');
+    wp_enqueue_style('c-gazou-data', 'https://www.gazou-data.com/contents_share/css/contents.css', [], '1.0', 'all');
+    wp_enqueue_style('c-owl-carousel', T_DIRE_URI.'/assets/css/owl.carousel.min.css', [], '1.0', 'all');
+    wp_enqueue_style('c-slick-local', T_DIRE_URI.'/assets/css/slick.min.css', [], '1.0', 'all');
+    wp_enqueue_style('c-slick-theme-local', T_DIRE_URI.'/assets/css/slick-theme.min.css', [], '1.0', 'all');
 
     // header-b.php使用ページ（front-page, business, service, support, work）用CSS/JS
     if (is_front_page() || is_page(array('business', 'service', 'support', 'work'))) {
