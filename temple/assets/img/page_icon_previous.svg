@@ -1,0 +1,10 @@
+<svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="btn_to_next">
+<mask id="mask0_294_3896" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="26">
+<rect id="Rectangle 193" width="16" height="26" transform="matrix(-1 0 0 1 16 0)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_294_3896)">
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M2.3934 10.8781L13 0.271484L15.1213 2.3928L4.51472 12.9994L15.1213 23.606L13 25.7273L2.3934 15.1207L0.272078 12.9994L2.3934 10.8781Z" fill="#363744"/>
+</g>
+</g>
+</svg>
