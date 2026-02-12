@@ -10,6 +10,7 @@
 ?>
 <script src="<?php echo T_DIRE_URI; ?>/assets/js/top_page.js"></script>
 
+<h1 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">相続について相談する | 税理士法人ミチ・ツナグ</h1>
 <div class="frontview">
 	<img src="<?php echo T_DIRE_URI; ?>/assets/img/frontview/frontview_back.png" alt="back" class="pc">
 	<img src="<?php echo T_DIRE_URI; ?>/assets/img/frontview/frontview_back_sp.png" alt="back" class="sp">

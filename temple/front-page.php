@@ -56,7 +56,7 @@ if ($_POST['flag']) {
 
         <h2 class="t_txt">
 
-          <img src="<?php echo T_DIRE_URI; ?>/assets_b/img/home/title01.png" alt="title">
+          <img src="<?php echo T_DIRE_URI; ?>/assets_b/img/home/title01.png" alt="相続について">
 
         </h2>
 
@@ -138,7 +138,7 @@ if ($_POST['flag']) {
 
         <h2 class="t_txt">
 
-          <img src="<?php echo T_DIRE_URI; ?>/assets_b/img/home/title02.png" alt="title">
+          <img src="<?php echo T_DIRE_URI; ?>/assets_b/img/home/title02.png" alt="事業支援について">
 
         </h2>
 

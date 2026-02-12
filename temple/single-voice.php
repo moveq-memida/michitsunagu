@@ -26,7 +26,7 @@
         <div class="container">
           <div class="mainheader">
             <div class="title">
-              <h1 class="fs-40 bold">お客様の声</h1>
+              <h1 class="fs-40 bold"><?php the_title(); ?></h1>
               <div class="fs-20 bold mt-10 mb-20">Customer voices</div>
               <div class="fs-14">
                 <span><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></span>

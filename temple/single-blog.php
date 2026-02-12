@@ -10,7 +10,7 @@ get_header();
 
 <section id="mainvisual" class="bg-whitegray">
 	<div class="title-div">
-		<h1 class="fw-600 fs-40 ls-12 lh-52 nowrap">お知らせ詳細</h1>
+		<h1 class="fw-600 fs-40 ls-12 lh-52"><?php the_title(); ?></h1>
 		<div class="mt-15 fw-600 fs-16 ls-6 lh-26">Topics</div>
 		<div class="row mt-20 fw-300 fs-14 lh-22 mx-0">
 		<div class="d-flex col-12 col-md-1">
