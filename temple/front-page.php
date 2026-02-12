@@ -1,6 +1,6 @@
 <?php
 
-if ($_POST['flag']) {
+if (!empty($_POST['flag'])) {
 
   get_header();
 } else {
@@ -12,7 +12,7 @@ if ($_POST['flag']) {
 
 
 
-<?php if (!$_POST['flag']): ?>
+<?php if (empty($_POST['flag'])): ?>
 
   <div class="home__frontview">
 
@@ -1087,7 +1087,7 @@ if ($_POST['flag']) {
 
 <?php
 
-if ($_POST['flag']) {
+if (!empty($_POST['flag'])) {
 
   get_footer();
 } else {

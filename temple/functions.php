@@ -496,10 +496,14 @@ function theme_add_files() {
     wp_enqueue_style('c-custom', T_DIRE_URI.'/assets/css/custom.css', [], '1.0', 'all');
     wp_enqueue_style('c-theme', T_DIRE_URI.'/style.css', [], '1.0', 'all');
 
-    // header-b.php使用ページ（front-page, business, service, support, work）用CSS
+    // header-b.php使用ページ（front-page, business, service, support, work）用CSS/JS
     if (is_front_page() || is_page(array('business', 'service', 'support', 'work'))) {
         wp_enqueue_style('c-assets-b', T_DIRE_URI.'/assets_b/css/style.css', [], '1.0', 'all');
         wp_enqueue_style('c-noto-serif', 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap', [], null, 'all');
+        wp_enqueue_style('c-fa4', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', [], '4.7.0', 'all');
+        wp_enqueue_script('s-main-b', T_DIRE_URI.'/assets_b/js/main.js', ['s-jquery'], '1.0', false);
+        wp_enqueue_script('s-bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js', ['s-jquery'], '4.2.15', false);
+        wp_enqueue_script('s-slick-legacy', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', ['s-jquery'], '1.6.0', false);
     }
 
     // WordPress本体のjquery.jsを読み込まない
@@ -507,8 +511,8 @@ function theme_add_files() {
         wp_deregister_script('jquery');
     }
 
-    // jQuery（CDN、footerに配置、defer）
-    wp_enqueue_script('s-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], '3.7.1', array('in_footer' => true, 'strategy' => 'defer'));
+    // jQuery（CDN、headに配置 — テンプレート内のインラインjQueryコードとの互換性維持）
+    wp_enqueue_script('s-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', [], '3.7.1', false);
     
     // Slick（jQueryに依存、footer）
     wp_enqueue_script('s-slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', ['s-jquery'], '1.9.0', true);
